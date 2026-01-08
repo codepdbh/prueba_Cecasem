@@ -4,17 +4,24 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
 // Fix for default marker icon in React Leaflet
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+const getMarkerIcon = (riesgo) => {
+    let color = 'blue';
+    switch (riesgo) {
+        case 'Alto': color = 'red'; break;
+        case 'Medio': color = 'orange'; break;
+        case 'Bajo': color = 'green'; break;
+        default: color = 'blue';
+    }
 
-let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41]
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
+    return new L.Icon({
+        iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
+        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41]
+    });
+};
 
 const MapComponent = ({ focos }) => {
     // Default center (Bolivia roughly)
@@ -28,7 +35,11 @@ const MapComponent = ({ focos }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {focos.map((foco) => (
-                    <Marker key={foco.id} position={[foco.latitud, foco.longitud]}>
+                    <Marker
+                        key={foco.id}
+                        position={[foco.latitud, foco.longitud]}
+                        icon={getMarkerIcon(foco.riesgo)}
+                    >
                         <Popup>
                             <strong>Departamento:</strong> {foco.departamento}<br />
                             <strong>Riesgo:</strong> {foco.riesgo}<br />
