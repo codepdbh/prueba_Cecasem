@@ -34,7 +34,7 @@ body {
   background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 
@@ -53,7 +53,8 @@ body {
   min-width: 200px;
 }
 
-.filter-input, .filter-select {
+.filter-input,
+.filter-select {
   padding: 0.75rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
@@ -70,7 +71,8 @@ body {
   border-collapse: collapse;
 }
 
-.focos-table th, .focos-table td {
+.focos-table th,
+.focos-table td {
   padding: 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
@@ -89,20 +91,31 @@ body {
   color: white;
 }
 
-.riesgo-alto { background-color: #d90429; }
-.riesgo-medio { background-color: #fb8500; }
-.riesgo-bajo { background-color: #2a9d8f; }
-
-.error-message {
-  background-color: #ffe8e8;
-  color: #d00000;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  border: 1px solid #fad2d2;
+.riesgo-alto {
+  background-color: #d90429;
 }
 
-.loading, .no-data {
+.riesgo-medio {
+  background-color: #fb8500;
+}
+
+.riesgo-bajo {
+  background-color: #2a9d8f;
+}
+
+.error-message {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid #ffeeba;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading,
+.no-data {
   text-align: center;
   padding: 2rem;
   color: #666;
