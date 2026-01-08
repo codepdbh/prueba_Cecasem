@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #e63946;
+  --secondary-color: #1d3557;
+  --bg-color: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+/* Filters */
+.filters-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-input, .filter-select {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+.focos-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.focos-table th, .focos-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.focos-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+}
+
+.riesgo-alto { background-color: #d90429; }
+.riesgo-medio { background-color: #fb8500; }
+.riesgo-bajo { background-color: #2a9d8f; }
+
+.error-message {
+  background-color: #ffe8e8;
+  color: #d00000;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #fad2d2;
+}
+
+.loading, .no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
