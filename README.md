@@ -62,6 +62,12 @@ La interfaz gráfica muestra el mapa y la lista de focos.
     *   Por Departamento (con autocompletado).
     *   Por Nivel de Riesgo (Bajo, Medio, Alto).
 
+### Decisiones Técnicas
+*   **FastAPI**: Elegido por su velocidad, tipo de seguridad con Pydantic y generación automática de documentación (Swagger).
+*   **React + Vite**: Combinación moderna que ofrece un desarrollo rápido y una experiencia de usuario fluida (Single Page Application).
+*   **Leaflet**: Librería de mapas "Lightweight", open-source y fácil de integrar con React.
+*   **Modo Offline**: Implementado para garantizar que la interfaz siga siendo funcional (con datos de ejemplo) incluso si el servidor backend no está disponible.
+
 ---
 
 ## 🇺🇸 English
@@ -119,3 +125,9 @@ The GUI displays the map and the list of spots.
 *   **Filters**:
     *   By Department (with autocomplete).
     *   By Risk Level (Low, Medium, High).
+
+### Technical Decisions
+*   **FastAPI**: Chosen for its speed, type safety with Pydantic, and automatic documentation generation (Swagger).
+*   **React + Vite**: A modern combination offering rapid development and a smooth user experience (Single Page Application).
+*   **Leaflet**: Lightweight, open-source map library that integrates easily with React.
+*   **Offline Mode**: Implemented to ensure the UI remains functional (showing mock data) even if the backend server is unreachable.
